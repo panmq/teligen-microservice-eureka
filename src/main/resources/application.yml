@@ -1,6 +1,6 @@
-#spring:
-#  application:
-#    name: teligen-microservice-eureka
+spring:
+  application:
+    name: teligen-microservice-eureka
 server:
   port: 8761
 logging:
@@ -12,7 +12,8 @@ eureka:
   instance:
     hostname: discovery
   client:
-#    fetchRegistry: false
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
 
